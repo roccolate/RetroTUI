@@ -73,6 +73,15 @@ Windows Terminal (SSH), iTerm2, tmux, screen.
 | `↑ ↓ ← →`   | Navegar menús / scroll     |
 | `PgUp/PgDn`| Scroll contenido           |
 
+### ASCII Video Player (mplayer + aalib)
+| Tecla         | Acción                              |
+|---------------|-------------------------------------|
+| `q`           | Salir del video y volver a RetroTUI |
+| `Space`       | Pausa / reanudar (mplayer)          |
+| `← / →`       | Seek atrás / adelante (mplayer)     |
+
+> Nota: la reproducción ASCII se ejecuta con `mplayer -vo aa` (aalib).
+
 ### File Manager
 | Tecla         | Acción                     |
 |---------------|----------------------------|
@@ -143,6 +152,12 @@ README.md      — Este archivo
 - Refactorización de Window.draw() → draw_frame() + draw_body()
 - Notepad agregado al menú File
 - Status bar muestra ventanas visibles/total
+
+### v0.4 — ASCII Video Player (experimental)
+- Nuevo visor/reproductor de video en ASCII (icono **ASCII Vid** y opción en menú File)
+- Apertura automática de archivos de video desde File Manager (`.mp4`, `.mkv`, `.webm`, etc.)
+- Reproducción ASCII delegada a `mplayer` con salida `aalib` (`-vo aa`)
+- Integración con File Manager: los videos se abren en el reproductor ASCII
 
 ### v0.2.2 — Bugfixes & Icons
 - Iconos rediseñados: ASCII art 3×4 con mejor contraste (negro sobre teal)
